@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="styles.css" />
 
+    <script src="./app.js"></script>
     <title>Validaciones form</title>
   </head>
   <body>
@@ -25,12 +26,15 @@
       <div class="main__grid">
         <form class="form" id="form">
           <h1 class="form__title">📫 Send a new message</h1>
+
           <div class="form__field">
             <label class="form__label">First name:</label>
+
             <input
               type="text"
               class="form__input"
               placeholder="John"
+              name="first name"
               id="firstName"
             />
           </div>
@@ -41,6 +45,7 @@
               type="text"
               class="form__input"
               placeholder="Doe"
+              name="last name"
               id="lastName"
             />
           </div>
@@ -51,21 +56,26 @@
               type="email"
               class="form__input"
               placeholder="johnDoe@example.com"
+              name="email"
               id="email"
             />
           </div>
 
           <div class="form__field">
-            <label class="form__label">First name:</label>
+            <label class="form__label">Message:</label>
             <textarea
               class="form__input form__input--textarea"
               placeholder="I wanna quit this 💩 job."
               id="message"
+              name="message"
             ></textarea>
           </div>
 
           <div class="form__footer mt-5">
             <input type="submit" class="form__btn" value="📩 Enviar" />
+            <button class="form__btn form__btn--clear" type="reset">
+              🧹Limpiar
+            </button>
           </div>
         </form>
 
